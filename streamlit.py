@@ -44,8 +44,8 @@ SELLERS = DATA_PATH + 'sellers_dataset.csv'
 # Load data
 @st.cache_data
 def load_data():
-    orders = pd.read_csv(ORDERS).sample(frac=0.5, random_state=42)
-    customers = pd.read_csv(CUSTOMERS).sample(frac=0.5, random_state=42)
+    orders = pd.read_csv(ORDERS)
+    customers = pd.read_csv(CUSTOMERS)
     order_items = pd.read_csv(ORDER_ITEMS)
     products = pd.read_csv(PRODUCTS)
     sellers = pd.read_csv(SELLERS)
@@ -53,6 +53,19 @@ def load_data():
     payments = pd.read_csv(PAYMENTS)
     reviews = pd.read_csv(REVIEWS)
     translation = pd.read_csv(TRANSLATION)
+
+    # Convert date columns
+    orders["order_purchase_timestamp"] = pd.to_datetime(orders["order_purchase_timestamp"])
+
+    # Filter data based on date
+    min_date = orders["order_purchase_timestamp"].min()
+    max_date = orders["order_purchase_timestamp"].max()
+
+    start_date, end_date = st.date_input(
+        label='Time Range', min_value=min_date, max_value=max_date, value=[min_date, max_date]
+    )
+
+    orders = orders[(orders["order_purchase_timestamp"] >= pd.to_datetime(start_date)) & (orders["order_purchase_timestamp"] <= pd.to_datetime(end_date))]
     
     df_dict = {
         'orders': orders,
