@@ -44,8 +44,8 @@ SELLERS = DATA_PATH + 'sellers_dataset.csv'
 # Load data
 @st.cache_data
 def load_data():
-    orders = pd.read_csv(ORDERS)
-    customers = pd.read_csv(CUSTOMERS)
+    orders = pd.read_csv(ORDERS).sample(frac=0.5, random_state=42)
+    customers = pd.read_csv(CUSTOMERS).sample(frac=0.5, random_state=42)
     order_items = pd.read_csv(ORDER_ITEMS)
     products = pd.read_csv(PRODUCTS)
     sellers = pd.read_csv(SELLERS)
