@@ -135,6 +135,8 @@ clean_null_values(df_dict)
 drop_duplicates(df_dict)
 df = create_main_dataframe(df_dict)
 
+st.success('Data loaded and cleaned successfully!')
+
 if df is not None:
     def display_introduction(main_df):
         """
