@@ -6,7 +6,6 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
-import numpy as np
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 

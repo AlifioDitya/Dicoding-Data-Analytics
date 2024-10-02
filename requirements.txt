@@ -1,5 +1,7 @@
+streamlit
 pandas
 plotly
 ipython
 seaborn
 pytest-warnings
+cartopy
