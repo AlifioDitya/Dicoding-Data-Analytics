@@ -2,4 +2,4 @@ pandas
 plotly
 ipython
 seaborn
-warnings
+pytest-warnings
