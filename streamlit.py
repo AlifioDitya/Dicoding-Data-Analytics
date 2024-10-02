@@ -128,7 +128,7 @@ def create_main_dataframe(df_dict):
     main_df.drop(columns=['product_category_name'], inplace=True)
     main_df.rename(columns={'product_category_name_english': 'product_category_name'}, inplace=True)
     
-    return main_df
+    return main_df.sample(n=100000, random_state=42)
 
 # Data Cleaning
 clean_null_values(df_dict)
