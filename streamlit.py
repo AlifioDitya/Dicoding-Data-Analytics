@@ -54,19 +54,6 @@ def load_data():
     reviews = pd.read_csv(REVIEWS)
     translation = pd.read_csv(TRANSLATION)
 
-    # Convert date columns
-    orders["order_purchase_timestamp"] = pd.to_datetime(orders["order_purchase_timestamp"])
-
-    # Filter data based on date
-    min_date = orders["order_purchase_timestamp"].min()
-    max_date = orders["order_purchase_timestamp"].max()
-
-    start_date, end_date = st.date_input(
-        label='Time Range', min_value=min_date, max_value=max_date, value=[min_date, max_date]
-    )
-
-    orders = orders[(orders["order_purchase_timestamp"] >= pd.to_datetime(start_date)) & (orders["order_purchase_timestamp"] <= pd.to_datetime(end_date))]
-    
     df_dict = {
         'orders': orders,
         'customers': customers,
@@ -141,7 +128,7 @@ def create_main_dataframe(df_dict):
     main_df.drop(columns=['product_category_name'], inplace=True)
     main_df.rename(columns={'product_category_name_english': 'product_category_name'}, inplace=True)
     
-    return main_df.sample(n=100000, random_state=42)
+    return main_df
 
 # Data Cleaning
 clean_null_values(df_dict)
