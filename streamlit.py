@@ -243,12 +243,13 @@ if df is not None:
                      labels={'customer_state': 'Customer State', 'delivery_time_days': 'Average Delivery Time (Days)'}, 
                      title='Average Delivery Time by Region', text='delivery_time_days')
         st.plotly_chart(fig)
-        st.markdown("**The average delivery time for each region has been plotted above.**")
+        st.markdown("**The average delivery time takes the longest on state AP.**")
 
     def count_late_deliveries(main_df):
         """
         Find if there are any late deliveries, how many, and plot late vs. not late deliveries.
         """
+        st.subheader('3. Is there any late deliveres? If yes, how many?')
         # Convert relevant columns to datetime
         main_df['order_estimated_delivery_date'] = pd.to_datetime(main_df['order_estimated_delivery_date'])
         main_df['order_delivered_customer_date'] = pd.to_datetime(main_df['order_delivered_customer_date'])
@@ -259,12 +260,6 @@ if df is not None:
         # Count late deliveries
         late_deliveries_count = main_df['late_delivery'].sum()
         not_late_deliveries_count = len(main_df) - late_deliveries_count
-
-        # Display the late delivery count
-        if late_deliveries_count > 0:
-            st.markdown(f"**There are {late_deliveries_count} late deliveries recorded.**")
-        else:
-            st.markdown("**There are no late deliveries recorded.**")
 
         # Create a summary dataframe for plotting
         summary_df = pd.DataFrame({
@@ -283,6 +278,12 @@ if df is not None:
 
         # Display the plot
         st.plotly_chart(fig)
+
+        # Display the late delivery count
+        if late_deliveries_count > 0:
+            st.markdown(f"**There are {late_deliveries_count} late deliveries recorded.**")
+        else:
+            st.markdown("**There are no late deliveries recorded.**")
 
 
     def analyze_causes_of_late_deliveries_correlation(main_df):
