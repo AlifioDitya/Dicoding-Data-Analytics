@@ -1,6 +1,6 @@
 # E-Commerce Data Analysis Dashboard
-https://dicoding-data-analytics-alifioditya.streamlit.app/
-
+https://dicoding-data-analytics-alifioditya.streamlit.app/  
+***Currently deployment is having resource allocation issues. Please run locally until further notice.***
 
 This project is an interactive **Streamlit dashboard** designed to analyze and explore the **Brazilian E-Commerce Dataset by Olist**, covering various business-related questions, customer behavior, and e-commerce insights. The dashboard includes **Exploratory Data Analysis (EDA)**, customer segmentation using **RFM (Recency, Frequency, Monetary) analysis**, and answers to key business questions such as sales trends, delivery performance, and more.
 
