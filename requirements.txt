@@ -1,7 +1,7 @@
-streamlit
-pandas
-plotly
-ipython
-seaborn
-pytest-warnings
-cartopy
+Cartopy==0.22.0
+ipython==8.12.3
+matplotlib==3.7.2
+pandas==2.0.3
+plotly==5.15.0
+seaborn==0.13.2
+streamlit==1.39.0
