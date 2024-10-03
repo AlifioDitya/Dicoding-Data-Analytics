@@ -16,6 +16,7 @@ Google Bangkit Cohort 2024
 - [Dashboard Features](#dashboard-features)
 - [Technologies Used](#technologies-used)
 - [Dataset Source](#dataset-source)
+- [Screenshots](#screenshots)
 
 ## Introduction
 In this project, we tackle some business-related questions using data analysis applied to the **Olist E-Commerce Dataset**. The dataset contains information about orders, customers, products, and reviews from 2016 to 2018. The analysis focuses on:
@@ -136,3 +137,16 @@ Once you run the app, it will display the **E-Commerce Data Analysis Dashboard**
 ## Dataset Source
 
 This project uses the **Brazilian E-Commerce Public Dataset by Olist**, available on [Kaggle](https://www.kaggle.com/olistbr/brazilian-ecommerce).
+
+## Screenshots
+![1](./screenshots/1.png)
+![2](./screenshots/2.png)
+![3](./screenshots/3.png)
+![4](./screenshots/4.png)
+![5](./screenshots/5.png)
+![6](./screenshots/6.png)
+![7](./screenshots/7.png)
+![8](./screenshots/8.png)
+![9](./screenshots/9.png)
+![10](./screenshots/10.png)
+![11](./screenshots/11.png)
