@@ -147,6 +147,5 @@ This project uses the **Brazilian E-Commerce Public Dataset by Olist**, availabl
 ![6](./screenshots/6.png)
 ![7](./screenshots/7.png)
 ![8](./screenshots/8.png)
-![9](./screenshots/9.png)
 ![10](./screenshots/10.png)
 ![11](./screenshots/11.png)
